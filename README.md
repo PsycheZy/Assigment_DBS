@@ -5,21 +5,22 @@ Project ini merupakan analisis data pada dataset Bike Sharing untuk mengetahui p
 
 Analisis dilakukan menggunakan Python di notebook, sedangkan dashboard interaktif dibuat menggunakan Streamlit.
 
-## Pertanyaan Bisnis
-1. Bagaimana pengaruh kondisi cuaca terhadap jumlah peminjaman sepeda?
-2. Kapan jumlah peminjaman sepeda tertinggi terjadi berdasarkan musim dan bulan?
-3. Pada kelompok waktu apa peminjaman sepeda paling tinggi?
-
-## Struktur Folder
-- `notebook.ipynb` : notebook analisis data
-- `Dashboard.py` : file dashboard Streamlit
-- `dashboard_data.csv` : dataset utama untuk dashboard
-- `requirements.txt` : daftar library yang dibutuhkan
-- `README.md` : dokumentasi project
-
 ## Cara Menjalankan Dashboard
-1. Pastikan semua library pada `requirements.txt` sudah terpasang.
+1. Pastikan semua library pada `requirements.txt` sudah terpasang
 2. Jalankan perintah berikut di terminal:
 
+## Setup Environment - Terminal
+Buka terminal pada folder utama proyek, lalu buat virtual environment
+Setelah virtual environment aktif, install seluruh library yang dibutuhkan
 ```bash
-streamlit run Dashboard.py
+pip install -r requirements.txt
+```
+## Run Streamlit App secara Local
+Jalankan dashboard dari folder utama proyek dengan perintah berikut
+```bash
+streamlit run Dashboard/Dashboard.py
+```
+Dashboard akan terbuka di browser lokal. Jika tidak terbuka otomatis, salin URL lokal yang muncul di terminal
+
+## Link Streamlit Cloud
+Link dashboard yang sudah dideploy tersedia pada file `url.txt`
