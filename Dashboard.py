@@ -36,12 +36,9 @@ else:
 
 season_options = ["All Seasons", "Spring", "Summer", "Fall", "Winter"]
 weather_options = ["All Weathers", "Clear", "Mist/Cloudy", "Light Snow/Rain"]
-month_options = ["All Months", "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                 "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
 selected_season = st.sidebar.selectbox("Pilih Musim", season_options)
 selected_weather = st.sidebar.selectbox("Pilih Kondisi Cuaca", weather_options)
-selected_month = st.sidebar.selectbox("Pilih Bulan", month_options)
 
 filtered_data = dashboard_data[
     (dashboard_data["dteday"].dt.date >= start_date) &
@@ -53,9 +50,6 @@ if selected_season != "All Seasons":
 
 if selected_weather != "All Weathers":
     filtered_data = filtered_data[filtered_data["weathersit"] == selected_weather]
-
-if selected_month != "All Months":
-    filtered_data = filtered_data[filtered_data["month_name"] == selected_month]
 
 st.title("Dashboard Analisis Bike Sharing")
 st.write(
